@@ -1,9 +1,12 @@
 import "./Home.css"
+import "../global.css"
 
-const Home = () =>{
+const Home = () => {
 
-    return(<>
-    
-    </>)
+    return (
+        <main className="main">
+            <div>this is Home Page</div>
+        </main>
+    )
 }
 export default Home;

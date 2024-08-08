@@ -1,9 +1,12 @@
 import "./education.css"
+import "../global.css"
 
-const About = () =>{
+const Education = () => {
 
-    return(<>
-    
-    </>)
+    return (
+        <main className="main">
+            <div>this is Education Page</div>
+        </main>
+    )
 }
-export default About;
+export default Education;

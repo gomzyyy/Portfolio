@@ -1,19 +1,21 @@
 import "./header.css"
+import { Link } from "react-router-dom";
 
 const Header = () =>{
 
-    return(<>
+    return(
     <nav className="navbar">
         <span className="logo">
-            <img src="" className="logo-image" />
+           <Link to="/"><img src="./logo.png" className="logo-image" /></Link>
         </span>
         <ul className="nav-options">
-            <li className="nav-option">Home</li>
-            <li className="nav-option">Education</li>
-            <li className="nav-option">Skills</li>
-            <li className="nav-option">Contact</li>
+            <li><Link className="nav-option" to="/">Home</Link></li>
+            <li><Link className="nav-option" to="/education">Education</Link></li>
+            <li><Link className="nav-option" to="/skills">Skills</Link></li>
+            <li><Link className="nav-option" to="/blogs">Blogs</Link></li>
         </ul>
+        <span className="nav-option contact">Contact?</span>
     </nav>
-    </>)
+    )
 }
 export default Header;

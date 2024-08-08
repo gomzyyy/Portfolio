@@ -3,3 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+body::-webkit-scrollbar{
+width: 15px;
+background-color: rgb(255, 255, 255);
+border: 0.5px solid rgb(204, 204, 204);
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(204, 204, 204);
+    border-left:0.5px solid rgb(204, 204, 204);
+    border-right:0.5px solid rgb(204, 204, 204);
+}

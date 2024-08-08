@@ -1,0 +1,51 @@
+.navbar {
+    width: 94%;
+    min-width: 560px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 3% auto 3%;
+}
+.logo{
+    position: absolute;
+    left: 8%;
+    height: 70px;
+    width: auto;
+}
+.logo img{
+    height: 100%;
+}
+
+.nav-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    font-size: 1rem;
+}
+li{
+    list-style-type: none;
+}
+
+.nav-option{
+    font-size: 1.1em;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    transition: 0.1s ease;
+    color: black;
+}
+.contact{
+    position: absolute;
+    right: 8%;
+    transition: 0.1s ease;
+}
+
+.nav-option:hover {
+    color: orangered;
+}
