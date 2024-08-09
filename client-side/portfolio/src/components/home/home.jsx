@@ -1,11 +1,10 @@
-import "./Home.css"
-import "../global.css"
+import { Left, Right } from "./context-home";
 
 const Home = () => {
-
     return (
         <main className="main home">
-            <div className="bg-img"><img src="./bg1.png" alt="" /></div>
+            <Left/>
+            <Right/>
         </main>
     )
 }

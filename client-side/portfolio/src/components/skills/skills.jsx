@@ -5,7 +5,7 @@ const Skills = () => {
 
     return (
         <main className="main">
-            <div>this is Github Page</div>
+            <div>this is Skills Page</div>
         </main>
     )
 }

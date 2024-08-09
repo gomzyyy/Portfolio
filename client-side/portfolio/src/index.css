@@ -3,13 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* body{
+    background-color: #202124;
+} */
 body::-webkit-scrollbar{
-width: 15px;
+/* width: 15px;
 background-color: rgb(255, 255, 255);
-border: 0.5px solid rgb(204, 204, 204);
+border: 0.5px solid rgb(204, 204, 204); */
+display: none;
 }
-body::-webkit-scrollbar-thumb{
-    background: rgb(204, 204, 204);
+/* body::-webkit-scrollbar-thumb{
+    background: rgb(233, 233, 233);
     border-left:0.5px solid rgb(204, 204, 204);
     border-right:0.5px solid rgb(204, 204, 204);
 }
+body::-webkit-scrollbar-thumb:hover{
+    background: rgb(204, 204, 204);
+    border-left:0.5px solid rgb(204, 204, 204);
+    border-right:0.5px solid rgb(204, 204, 204);
+} */
