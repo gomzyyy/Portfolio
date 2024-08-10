@@ -1,0 +1,35 @@
+@media (max-width: 1200px) {
+    .home {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 620px) {
+    .left {
+        height: 720px;
+    }
+
+    .profile-image {
+        border-radius: 60px;
+    }
+
+    .left-overview {
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .info {
+        align-items: center;
+    }
+
+    .right {
+        border-top: 0.3px solid rgb(202, 202, 202);
+        border-radius: 0;
+    }
+
+    .info-discription {
+        padding: 30px;
+        font-size: 1.02rem;
+    }
+}

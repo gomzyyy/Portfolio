@@ -1,35 +1,41 @@
 .home {
+    min-height: 600px;
+    max-height: 1200px;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    padding: 30px;
+    gap: 40px;
 }
+
+/* LEFT SIDE */
 
 .left {
     height: 600px;
-    min-width: 400px;
-    flex: 1;
+    min-width: 560px;
+    max-width: 49%;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    flex-direction: column;
+    gap: 30px;
+    overflow: hidden;
 }
-
-/* LEFT SIDE */
 
 .left-overview {
     display: flex;
     align-items: center;
     gap: 20px;
-    position: absolute;
-    top: 60px;
 }
 
 .profile-image {
-    border-radius: 40vh;
+    border-radius: 90px;
     overflow: hidden;
     background: linear-gradient(to right, orange, rgb(255, 191, 0), rgb(249, 253, 1));
-    height: 183px;
-    width: 183px;
+    height: 170px;
+    width: 170px;
     cursor: pointer;
 }
 
@@ -37,29 +43,21 @@
     object-fit: contain;
     position: relative;
     height: 195px;
-    left: 11px;
-    transition: 0.8s ease;
+    left: 3px;
+    bottom: 5px;
+    transition: 26s ease-in-out;
 }
 
 .profile-image img:hover {
-    animation: zoomIn 26s ease-in-out;
-}
-
-@keyframes zoomIn {
-    0% {
-        transform: scale(1.0);
-    }
-
-    100% {
-        transform: scale(2);
-    }
+    transform: scale(2);
 }
 
 .name {
-    top: 136px;
-    left: 29px;
-    z-index: 999;
+    top: 132px;
+    left: 21px;
     opacity: 0;
+    z-index: 999;
+    position: relative;
     transition: 0.6s ease;
     transition-delay: 1s;
     cursor: pointer;
@@ -93,25 +91,31 @@
 }
 
 .info .info-small {
-    font-size: 10px;
-    letter-spacing: 3px;
-    margin-left: 29px;
-    word-spacing: 4px;
+    font-size: 9.3px;
+    letter-spacing: 2px;
+    margin-left: 22px;
+    word-spacing: 12px;
 }
 
 .info-discription {
     height: fit-content;
-    width: 570px;
-    position: absolute;
-    top: 280px;
-    font-size: 1.05rem;
+    width: 550px;
+    font-size: 1.04rem;
     font-family: sans-serif;
     font-weight: 400;
-    margin-left: 40px;
+    margin-left: 10px;
     transition: 0.3s ease-in-out;
     padding: 20px;
     border-radius: 10px;
     cursor: not-allowed;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-discription span{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
 }
 
 .info-discription:hover {
@@ -123,16 +127,16 @@
     width: 90px;
     height: 40px;
     box-sizing: border-box;
-    border: 0.8px solid whitesmoke;
+    border: 0.8px solid rgb(209, 209, 209);
     border-radius: 5px;
-    background-color: whitesmoke;
+    background-color: rgb(227, 227, 227);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    bottom: 60px;
-    right: 60px;
     cursor: pointer;
+    position: relative;
+    left: 170px;
+    bottom: 22px;
 }
 
 .contact-btn:hover {
@@ -143,13 +147,13 @@
 
 .right {
     height: 600px;
-    min-width: 400px;
-    flex: 1;
+    min-width: 560px;
+    max-width: 49%;
     border-radius: 10px;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1rem;
 }
 
 .right .skills-overview {
@@ -157,25 +161,36 @@
     left: 50px;
 }
 
+.skills-overview .skill-lable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+}
+
 .skills-logo {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    margin-top: 15px;
     gap: 20px;
-    width: 400px;
-    height: 300px;
+    width: 512px;
+    height: 407px;
     padding: 20px;
 }
 
 .skill {
-    padding: 9px;
-    border-radius: 3px;
-    font-size: 1.04rem;
+    padding: 17px;
+    border-radius: 6px;
+    font-size: 1.26em;
     font-weight: 600;
     font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
     height: fit-content;
+    width: fit-content;
     cursor: pointer;
 }

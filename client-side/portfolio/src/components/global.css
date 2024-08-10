@@ -1,5 +1,5 @@
 .main {
-    height: 600px;
+    /* height: 600px; */
     width: 94%;
     margin: 20px 3%;
     border: 1px solid transparent;
@@ -10,7 +10,6 @@
 }
 
 .hover-box {
-    position: absolute;
     padding: 3px;
     border-radius: 3px;
     font-weight: 600;

@@ -1,0 +1,21 @@
+
+@media (max-width:1080px){
+
+    .navbar{
+        width: 100vw;
+        margin: 0;
+    }
+    .nav-options {
+        gap: 10%;
+    }
+}
+
+@media (max-width:620px){
+
+    .nav-options {
+        display: none;
+    }
+    .sidebar-toggle{
+        display: inline;
+    }
+}

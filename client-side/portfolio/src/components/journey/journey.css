@@ -1,0 +1,28 @@
+.journey {
+    min-height: 600px;
+    max-height: 1200px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 30px;
+}
+.journey-lable{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    height: 42px;
+    width: fit-content;
+    padding: 10px;
+    animation: journeylable 1.1s ease;
+}
+@keyframes journeylable{
+    0%{
+       color: white;
+    }
+    100%{
+       color: black;
+    }
+}

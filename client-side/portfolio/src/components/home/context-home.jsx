@@ -17,7 +17,7 @@ export const Left = () => {
                     <span className="info-small">{BREIF_TEXT}</span>
                 </div></div>
             <div className="info-discription">
-                <p>{DISCRIPTION}</p>
+                <span>{DISCRIPTION}</span>
             </div>
             <span className="contact-btn"><Link className="nav-option" to="/contact">Contact</Link></span>
         </div>
@@ -41,7 +41,7 @@ export const Right = () => {
                 <span className="skill col-mongo">MongoDB</span>
                 <span className="skill col-py">Python</span>
                 <span className="skill col-tailwind">Tailwind</span>
-                <span className="skill col-bootstrap">Bootstrap</span>
+                <span className="skill col-bootstrap">BootStrap</span>
                 <span className="skill col-git">Git</span>
                 <span className="skill col-github">GitHub</span>
                 </div>
