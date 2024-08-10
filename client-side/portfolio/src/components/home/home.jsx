@@ -1,10 +1,10 @@
-import { Left, Right } from "./context-home";
+import { LeftHome, RightHome } from "./context-home";
 
 const Home = () => {
     return (
         <main className="main home">
-            <Left/>
-            <Right/>
+            <LeftHome/>
+            <RightHome/>
         </main>
     )
 }

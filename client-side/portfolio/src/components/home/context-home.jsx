@@ -4,7 +4,7 @@ import "../global.css"
 import { NAME, ROLE, BREIF_TEXT, DISCRIPTION, SKILL_LABLE } from "../../assets/data"
 import { Link } from "react-router-dom"
 
-export const Left = () => {
+export const LeftHome = () => {
 
     return (
         <div className="left">
@@ -24,7 +24,7 @@ export const Left = () => {
     )
 };
 
-export const Right = () => {
+export const RightHome = () => {
 
     return (
         <div className="right">

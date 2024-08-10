@@ -9,7 +9,11 @@ import { IoMdMenu, IoMdClose  } from "react-icons/io";
 const Header = () =>{
 
 const [menu, setMenu] = useState(false)
-const handleMenu = () => setMenu(p=>!p)
+const handleMenu = () => {
+    setMenu(p=>!p);
+    console.log("clicked")
+
+}
 
     return(
     <nav className="navbar" style={{ height: menu ? "160px" : "80px"}}>
@@ -21,7 +25,7 @@ const handleMenu = () => setMenu(p=>!p)
             <li><Link className="nav-option" to="/contact">Contact</Link></li>
         </ul>
         <span className="sidebar-toggle" onClick={handleMenu}>{menu ? <IoMdClose  /> : <IoMdMenu/> }</span>
-        {menu&&<Options/>}
+        {menu && <Options handleMenu={handleMenu}/>}
     </nav>
     )
 }
