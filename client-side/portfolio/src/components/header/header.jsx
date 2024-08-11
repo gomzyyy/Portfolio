@@ -12,8 +12,8 @@ const [menu, setMenu] = useState(false)
 const handleMenu = () => {
     setMenu(p=>!p);
     console.log("clicked")
-
 }
+
 
     return(
     <nav className="navbar" style={{ height: menu ? "160px" : "80px"}}>

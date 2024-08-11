@@ -7,7 +7,7 @@ export const SKILL_LABLE = "Major Skills:"
 
 export const JOURNEY1_LABLE = "Finished my schooling from..."
 export const JOURNEY2_LABLE = "Decided to graduate..."
-export const JOURNEY3_LABLE = "Get intrested in coding and..."
+export const JOURNEY3_LABLE = "Got intrested in coding and..."
 
 
 {/*ICONS*/}
