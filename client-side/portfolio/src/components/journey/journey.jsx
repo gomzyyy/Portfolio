@@ -1,14 +1,15 @@
-import { LeftJourney, RightJourney, MiddleJourney } from "./context-journey";
+import { SchoolJourney, CollageJourney, CodingJourney } from "./context-journey";
 
 const Journey = () => {
 
     return (
         <main className="main journey">
+            <CodingJourney />
+
             <div className="upper">
-            <LeftJourney/>   
-            <MiddleJourney/> 
+                <SchoolJourney />
+                <CollageJourney />
             </div>
-            <RightJourney/>
         </main>
     )
 }

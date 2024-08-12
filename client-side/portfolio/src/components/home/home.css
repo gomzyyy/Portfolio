@@ -37,6 +37,7 @@
     height: 170px;
     width: 170px;
     cursor: pointer;
+    transition: 0.3s linear;
 }
 
 .profile-image img {
@@ -74,6 +75,7 @@
     display: flex;
     flex-direction: column;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 0.3s linear;
 }
 
 .info .info-name,
@@ -137,6 +139,7 @@
     position: relative;
     left: 170px;
     bottom: 22px;
+    transition: 0.3s linear;
 }
 
 .contact-btn:hover {
@@ -154,11 +157,13 @@
     align-items: center;
     justify-content: center;
     font-size: 1rem;
+    transition: 0.3s linear;
 }
 
 .right .skills-overview {
     top: 40px;
     left: 50px;
+    transition: 0.3s linear;
 }
 
 .skills-overview .skill-lable {
@@ -168,6 +173,7 @@
     font-size: 1.5em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
+    transition: 0.3s linear;
 }
 
 .skills-logo {
@@ -179,6 +185,7 @@
     width: 512px;
     height: 407px;
     padding: 20px;
+    transition: 0.3s linear;
 }
 
 .skill {
@@ -193,4 +200,5 @@
     height: fit-content;
     width: fit-content;
     cursor: pointer;
+    transition: 0.3s linear;
 }

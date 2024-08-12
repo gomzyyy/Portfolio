@@ -1,0 +1,104 @@
+@media(max-width: 1200px) {
+    .codingJourney{
+        height: 600px;
+    }
+    .schoolJourney, .collageJourney{
+        height: 600px;
+    }
+    .breif-container{
+        height: 90%;
+        padding: 0;
+    }
+    .journey-breif{
+        width: 100%;
+        align-items: unset;
+        padding: 30px;
+    }
+    .slide3{
+        flex-direction: column;
+    }
+    .img1{
+        top: 220px;
+        left: 0;
+    }
+    .img3{
+        bottom: 220px;
+        right: 0;
+    }
+    .b-container1,.b-container2{
+
+        flex-direction: column;
+    }
+    .breif1, .breif2{
+        flex-direction: row;
+    }
+
+}
+@media(max-width: 1000px) {
+    .schoolJourney, .collageJourney{
+        height: 600px;
+        width: 100%;
+    }
+    .codingJourney{
+        height: 800px;
+    }
+    .btn-readMore{
+        right: 0;
+    }
+
+    .upper{
+        flex-direction: column;
+    }
+    .slide3{
+        flex-direction: row;
+    }
+    .b-container3{
+        flex-direction: column;
+    }
+    .img1{
+        top: 0;
+        left: 200px;
+    }
+    .img3{
+        bottom: 0;
+        right: 200px;
+    }
+    .breif1, .breif2{
+        width: 65%;
+        min-width: 400px;
+    }
+  
+}
+  /* .codingJourney{
+        height: 600px;
+    }
+    .schoolJourney, .collageJourney{
+        height: 600px;
+    }
+    .breif-container{
+        height: 90%;
+        padding: 0;
+    }
+    .journey-breif{
+        width: 100%;
+        align-items: unset;
+        padding: 30px;
+    }
+    .slide3{
+        flex-direction: column;
+    }
+    .img1{
+        top: 220px;
+        left: 0;
+    }
+    .img3{
+        bottom: 220px;
+        right: 0;
+    }
+    .b-container1,.b-container2{
+
+        flex-direction: column;
+    }
+    .breif1, .breif2{
+        flex-direction: row;
+    } */

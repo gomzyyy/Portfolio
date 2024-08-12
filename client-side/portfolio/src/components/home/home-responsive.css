@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+@media (max-width: 1150px) {
     .home {
         justify-content: center;
         flex-direction: column;
@@ -6,8 +6,18 @@
 }
 
 @media (max-width: 620px) {
+    .home {
+        transform: scale(0.95);
+        padding: 0;
+        margin: 80px 0 0 0; 
+        gap: 0;
+        width: 100%;
+    }
+
     .left {
-        height: 720px;
+        height: 580px;
+        gap: 10px;
+        justify-content: unset;
     }
 
     .profile-image {
@@ -19,17 +29,33 @@
         flex-direction: column;
     }
 
+    .info-discription {
+        transform: scale(0.8);
+        width: 570px;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
     .info {
         align-items: center;
+    }
+    .contact-btn{
+        left: 0px;
+        bottom: 0px;
     }
 
     .right {
         border-top: 0.3px solid rgb(202, 202, 202);
         border-radius: 0;
+        transform: scale(0.9);
     }
+}
+@media (max-width:450px){
 
     .info-discription {
-        padding: 30px;
+        transform: scale(0.8);
+        width: 440px;
+        padding: 5px;
         font-size: 1.02rem;
     }
 }

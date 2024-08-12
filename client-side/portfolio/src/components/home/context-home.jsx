@@ -19,7 +19,7 @@ export const LeftHome = () => {
             <div className="info-discription">
                 <span>{DISCRIPTION}</span>
             </div>
-            <span className="contact-btn"><Link className="nav-option" to="/contact">Contact</Link></span>
+            <span className="contact-btn"><Link className="nav-option col-black" to="/contact">Contact</Link></span>
         </div>
     )
 };

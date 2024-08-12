@@ -1,21 +1,37 @@
+@media (max-width:1080px) {
 
-@media (max-width:1080px){
-
-    .navbar{
+    .navbar {
         width: 100vw;
         margin: 0;
     }
+
     .nav-options {
         gap: 10%;
     }
 }
 
-@media (max-width:620px){
+@media (max-width:620px) {
+    .navbar {
+        min-width: auto;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
 
     .nav-options {
         display: none;
+        font-weight: 100;
     }
-    .sidebar-toggle{
+
+    .sidebar-toggle {
         display: inline;
     }
+
+    .options {
+        width: auto;
+        gap: 18px;
+        font-size: 0.9rem;
+        }
 }
