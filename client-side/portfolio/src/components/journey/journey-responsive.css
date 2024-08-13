@@ -1,104 +1,147 @@
 @media(max-width: 1200px) {
-    .codingJourney{
+    .codingJourney {
         height: 600px;
     }
-    .schoolJourney, .collageJourney{
+
+    .schoolJourney,
+    .collageJourney {
         height: 600px;
     }
-    .breif-container{
+
+    .breif-container {
         height: 90%;
         padding: 0;
     }
-    .journey-breif{
+
+    .journey-breif {
         width: 100%;
         align-items: unset;
         padding: 30px;
     }
-    .slide3{
+
+    .slide3 {
         flex-direction: column;
     }
-    .img1{
+
+    .img1 {
         top: 220px;
         left: 0;
     }
-    .img3{
+
+    .img3 {
         bottom: 220px;
         right: 0;
     }
-    .b-container1,.b-container2{
+
+    .b-container1,
+    .b-container2 {
 
         flex-direction: column;
     }
-    .breif1, .breif2{
+
+    .breif1,
+    .breif2 {
         flex-direction: row;
     }
 
 }
+
 @media(max-width: 1000px) {
-    .schoolJourney, .collageJourney{
+
+    .schoolJourney,
+    .collageJourney {
         height: 600px;
         width: 100%;
     }
-    .codingJourney{
+
+    .codingJourney {
         height: 800px;
     }
-    .btn-readMore{
+
+    .btn-readMore {
         right: 0;
     }
 
-    .upper{
+    .upper {
         flex-direction: column;
     }
-    .slide3{
+
+    .slide3 {
         flex-direction: row;
+        width: 100%;
     }
-    .b-container3{
+
+    .b-container3 {
         flex-direction: column;
     }
-    .img1{
+
+    .img1 {
         top: 0;
         left: 200px;
     }
-    .img3{
+
+    .img3 {
         bottom: 0;
         right: 200px;
     }
-    .breif1, .breif2{
+
+    .breif1,
+    .breif2 {
         width: 65%;
         min-width: 400px;
     }
-  
-}
-  /* .codingJourney{
-        height: 600px;
-    }
-    .schoolJourney, .collageJourney{
-        height: 600px;
-    }
-    .breif-container{
-        height: 90%;
-        padding: 0;
-    }
-    .journey-breif{
-        width: 100%;
-        align-items: unset;
-        padding: 30px;
-    }
-    .slide3{
-        flex-direction: column;
-    }
-    .img1{
-        top: 220px;
-        left: 0;
-    }
-    .img3{
-        bottom: 220px;
-        right: 0;
-    }
-    .b-container1,.b-container2{
 
-        flex-direction: column;
+}
+
+@media(max-width:620px) {
+
+    .codingJourney,
+    .collageJourney,
+    .schoolJourney {
+        border: 2px solid rgb(209, 209, 209);
     }
-    .breif1, .breif2{
-        flex-direction: row;
-    } */
+
+    .journey {
+        padding: 6px;
+    }
+
+    .codingJourney {
+        height: 880px;
+    }
+
+    .img1,
+    .img3 {
+        display: none;
+    }
+
+    .journey-lable {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width:500px) {
+
+    .codingJourney {
+        height: 900px;
+        padding: 5px;
+    }
+
+    .journey-breif {
+        padding: 10px;
+    }
+
+    .readBtn3 {
+        right: 20px;
+        bottom: -35px;
+    }
+
+    .journey-lable {
+        font-size: 1rem;
+    }
+
+    .breif1,
+    .breif2 {
+        width: 65%;
+        min-width: 330px;
+    }
+}

@@ -14,7 +14,8 @@ export const SchoolJourney = () => {
                 <div className="journey-breif breif1">
                     <p>"{SCHOOL_JOURNEY_BREIF1}..."</p>
                     <p>"{SCHOOL_JOURNEY_BREIF2}..."</p>
-                    <div className="btn-readMore">Read</div>
+                    <button className="btn-readMore readBtn1" disabled>Read</button>
+                    {/* btn-active btn-hover */}
                 </div>
             </div>
         </div>
@@ -31,7 +32,8 @@ export const CollageJourney = () => {
                 <div className="journey-breif breif2">
                     <p>"{COLLAGE_JOURNEY_BREIF1}..."</p>
                     <p>"{COLLAGE_JOURNEY_BREIF2}..."</p>
-                    <div className="btn-readMore">Read</div>
+                    <button className="btn-readMore readBtn2" disabled>Read</button>
+                    {/* btn-active btn-hover */}
                 </div>
             </div>
         </div>
@@ -53,7 +55,8 @@ export const CodingJourney = () => {
                     <p>"{CODING_JOURNEY_BREIF1}..."</p>
                     <p>"{CODING_JOURNEY_BREIF2}..."</p>
                     <p>"{CODING_JOURNEY_BREIF3}..."</p>
-                    <div className="btn-readMore">Read</div>
+                    <button className="btn-readMore readBtn3" disabled>Read</button>
+                    {/* btn-active btn-hover */}
                 </div>
             </div>
         </div>
