@@ -47,7 +47,7 @@
     .right {
         border-top: 0.3px solid rgb(202, 202, 202);
         border-radius: 0;
-        transform: scale(0.9);
+        transform: scale(0.88);
     }
 }
 @media (max-width:450px){
