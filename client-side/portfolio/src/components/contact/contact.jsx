@@ -1,11 +1,12 @@
 import "./contact.css"
 import "../global.css"
+import ComingSoon from "../coming-soon/coming-soon";
 
 const Contact = () => {
 
     return (
         <main className="main">
-            <div>this is Contact Page</div>
+            <ComingSoon />
         </main>
     )
 }

@@ -1,14 +1,16 @@
 import "./skills.css"
 import { ProfileSkills, MajorSkills, SoftSkills } from "./context-skills";
 import SkillCard from "./skill-card";
+import ComingSoon from "../coming-soon/coming-soon"
 
 
 const Skills = () => {
 
     return (
-        <main className="main skills">
+        <main className="main">
 
-            <SkillCard />
+            <ComingSoon />
+            {/* <SkillCard /> */}
         </main>
     )
 }
