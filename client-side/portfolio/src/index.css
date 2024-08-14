@@ -11,6 +11,3 @@ html,body{
 body::-webkit-scrollbar{
 display: none;
 }
-Link:active{
-    background-color: transparent;
-}
