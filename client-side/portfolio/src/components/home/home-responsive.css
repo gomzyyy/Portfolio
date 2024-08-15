@@ -15,7 +15,7 @@
     }
 
     .left {
-        height: 580px;
+        height: 680px;
         gap: 10px;
         justify-content: unset;
     }
@@ -41,7 +41,7 @@
     }
     .contact-btn{
         left: 0px;
-        bottom: 0px;
+        bottom: 35px;
     }
 
     .right {
@@ -54,8 +54,12 @@
 
     .info-discription {
         transform: scale(0.8);
-        width: 440px;
-        padding: 5px;
-        font-size: 1.02rem;
+        width: 420px;
+        font-size: 1.09rem;
+        height: 300px;
+        padding: 14px;
+    }
+    .right {
+        transform: scale(0.8);
     }
 }

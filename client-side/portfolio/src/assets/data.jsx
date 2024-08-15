@@ -1,7 +1,7 @@
 {/*HOME_SECTION*/ }
 
 export const NAME = "Gomzy Dhingra";
-export const ROLE = "<Frontend Developer/>";
+export const ROLE = "Frontend Developer";
 export const BREIF_TEXT = "I design 'n build user interfaces.";
 export const DISCRIPTION = "As a dedicated frontend developer, I have a strong command of HTML, core CSS, and foundational JavaScript concepts, allowing me to create responsive and dynamic user interfaces. My expertise extends to React, where I build efficient, component-based applications. Currently, I am expanding my skill set by diving into backend development to become a more versatile full-stack developer. I am passionate about crafting seamless and engaging web experiences and continuously improving my technical abilities.";
 export const SKILL_LABLE = "Major Skills:"
@@ -32,82 +32,108 @@ export const MajorSkillsData = [
         "skills": "HTML5",
         "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, laboriosam autem molestias, labore placeat rem nulla praesentium ab ut consequatur at commodi in sed minima vitae voluptates saepe quibusdam corporis!",
         "rating": "4.8",
-        "Projects":4,
-         "projectName":[]
+        "image":"",
+        "projects": 4,
+        "projectName": ["cfbfi", "sbiuwr", "nrwiu", "wbrvw"],
+        "ref": "Css & Js"
     }, {
         "id": 2,
         "skills": "CSS3",
         "details": "",
         "rating": "4.5",
-        "Projects":4,
-        "projectName":[]
+        "image":"",
+        "projects": 4,
+        "projectName": [],
+        "ref": "Css & Js"
     }, {
         "id": 3,
         "skills": "JavaScript",
         "details": "",
         "rating": "4.8",
-        "Projects":4,
-        "projectName":[]
+        "image":"",
+        "projects": 4,
+        "projectName": [],
+        "ref": "Css & Js"
     }, {
         "id": 4,
         "skills": "React.js",
         "details": "",
         "rating": "4.8",
-        "Projects":4,
-        "projectName":[]
+        "image":"",
+        "projects": 4,
+        "projectName":[],
+        "ref": "Css & Js"
     }, {
         "id": 5,
         "skills": "Redux-toolkit",
         "details": "",
-       "rating": "4.8",
-        "Projects":4,
-        "projectName":[]
+        "rating": "4.8",
+        "image":"",
+        "projects": 4,
+        "projectName":[],
+        "ref": "Css & Js"
     }, {
         "id": 6,
         "skills": "Node.js",
         "details": "",
-       "rating": "4.8",
-        "Projects":4,
-        "projectName":[]
+        "rating": "4.8",
+        "image":"",
+        "projects": 4,
+       "projectName":[],
+        "ref": "Css & Js"
     }, {
         "id": 7,
         "skills": "Express.js",
         "details": "",
-       "rating": "4.8",
-        "Projects":4,
-        "projectName":[]
+        "rating": "4.8",
+        "image":"",
+        "projects": 4,
+        "projectName":[],
+        "ref": "Css & Js"
     }, {
         "id": 8,
         "skills": "MongoDB",
         "details": "",
-        "rating": "4.8"
+        "rating": "4.8",
+        "image":"",
+        "projects": 4,
+        "projectName":[],
+        "ref": "Css & Js"
     }, {
         "id": 9,
         "skills": "Python",
         "details": "",
         "rating": "4.8",
-        "Projects":4,
-        "projectName":[]
+        "image": "",
+        "projects": 4,
+        "projectName":[],
+        "ref": "Css & Js"
     }, {
         "id": 10,
         "skills": "Git & GitHub",
         "details": "",
         "rating": "4.8",
-        "Projects":4,
-        "projectName":[]
+        "image": "",
+        "projects": 4,
+        "projectName":[],
+        "ref": "Css & Js"
     }, {
         "id": 11,
         "skills": "Tailwind",
         "details": "",
         "rating": "4.8",
-        "Projects":4,
-        "projectName":[]
+        "image": "",
+        "projects": 4,
+        "projectName":[],
+        "ref": "Css & Js"
     }, {
         "id": 12,
         "skills": "Bootstrap",
         "details": "",
-       "rating": "4.8",
-        "Projects":4,
-        "projectName":[]
+        "rating": "4.8",
+        "image": "",
+        "projects": 4,
+        "projectName":[],
+        "ref": "Css & Js"
     }
 ]

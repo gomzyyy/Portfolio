@@ -13,7 +13,7 @@ export const LeftHome = () => {
                 <img src="./me.png" alt="" />
             </div>
                 <div className="info">
-                    <span className="info-name">{NAME},</span><span className="info-text"> I'm a </span><span className="info-role">{ROLE}</span>
+                    <span className="info-name">{NAME},</span><span className="info-text"> I'm a </span><span className="info-role">{`<${ROLE}/>`}</span>
                     <span className="info-small">{BREIF_TEXT}</span>
                 </div></div>
             <div className="info-discription">
