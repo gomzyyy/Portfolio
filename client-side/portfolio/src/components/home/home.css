@@ -119,11 +119,6 @@
     box-sizing: border-box;
 }
 
-.info-discription:hover {
-    font-family: sans-serif;
-    background-color: whitesmoke;
-}
-
 .contact-btn {
     width: 90px;
     height: 40px;

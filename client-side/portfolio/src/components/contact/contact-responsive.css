@@ -1,20 +1,45 @@
-@media (max-width:1280px){
-    .contact-page{
-        flex-direction: column;
-    }
-    .form-container{
-        max-width: 80%;
+@media (max-width: 1280px) {
+  .contact-page {
+    flex-direction: column;
+  }
+  .form-container {
+    max-width: 100%;
+  }
+}
+@media (max-width: 720px) {
+  .contact-page {
+    padding: 10px;
+  }
+  .form-container {
+    max-width: 100%;
+  }
+  .contact-overview {
+    transform: scale(0.9);
+    flex-direction: column;
+  }
+  .contact-info {
+    align-items: center;
+  }
+
+  .link-container{
+    border-top: 1px solid rgb(160, 160, 160);
+  }
+}
+@media (max-width: 450px) {
+    .form-container form {
+        transform: scale(0.9);
     }
 }
-@media(max-width:720px){
-    .contact-page {
-        padding: 10px;
-      }
-      .form-container{
-        max-width: 100%;
+@media (max-width: 360px) {
+    .form-container{
+        gap: 0;
     }
-    .contact-overview{
-        transform: scale(0.9);
-    } 
-   
+    .link-icons {
+        flex-direction: column;
+        gap: 40px;
+      }
+    .form-container form {
+        height: 511px;
+        transform: scale(0.76);
+    }
 }

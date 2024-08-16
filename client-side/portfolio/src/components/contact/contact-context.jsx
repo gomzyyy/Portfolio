@@ -86,7 +86,7 @@ export const ContactForm = () => {
           <span className="contact-info-small">{BREIF_TEXT}</span>
         </div>
       </div>
-      <div className="contact-lable connect">Post a connection request.</div>
+      <div className="contact-lable connect">Request a connection.</div>
       <form
         action="#"
         onSubmit={(e) => handleOnSubmitContact(e)}
@@ -162,7 +162,7 @@ export const ContactForm = () => {
 export const SocialMediaContact = () => {
   const igLink = `https://www.instagram.com/urzyatin/`
   const linkedinLink = `https://www.linkedin.com/in/gomzy-dhingra-4140202b5/`
-  const twitterLink = `https://x.com/home?utm_source=homescreen&utm_medium=shortcut`
+  const twitterLink = `https://x.com/urzyatin`
   return (
     <div className="social-media-side">
 

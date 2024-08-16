@@ -1,6 +1,6 @@
 .contact-page {
   min-height: 600px;
-  max-height: 1200px;
+  max-height: 2000px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -22,7 +22,7 @@
 
 .form-container {
   min-height: 820px;
-  max-height: fit-content;
+  max-height: 1600px;
   min-width: 450px;
   max-width: 49%;
   width: 680px;
@@ -275,7 +275,7 @@
 /*social media side*/
 
 .social-media-side {
-  min-height: 740px;
+  /* min-height: 740px; */
   height: fit-content;
   min-width: 560px;
   max-width: 49%;
@@ -312,4 +312,5 @@
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  height: fit-content;
 }
