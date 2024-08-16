@@ -6,6 +6,7 @@ import Journey from './components/journey/journey.jsx'
 import Skills from './components/skills/skills.jsx'
 import Blogs from './components/blogs/blogs.jsx'
 import Contact from './components/contact/contact.jsx'
+import SubmitionPage from './components/contact/submission-page.jsx'
 import './index.css'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom"
 
@@ -17,7 +18,8 @@ const router = createBrowserRouter(
       <Route path='/journey' element={<Journey/> } />
       <Route path='/skills' element={<Skills/>} />
       <Route path='/blogs' element={<Blogs/> } />
-      <Route path='/contact' element={<Contact/>} />
+      <Route path='/contact' element={<Contact/>}/>
+      <Route exact path='/contact/submition' element={<SubmitionPage/>} />
     </Route>
   )
 )

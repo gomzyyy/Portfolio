@@ -29,6 +29,11 @@
     color: orangered;
 }
 
+.error-msg{
+    color: red;
+    font-size:13px;
+}
+
 @keyframes slide {
 
     0% {
