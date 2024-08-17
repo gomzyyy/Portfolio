@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import { Server, Socket } from "socket.io";
+import { Server } from "socket.io";
 
 dotenv.config({});
 
@@ -31,4 +31,11 @@ let users
 
 IO.on("connection", (socket)=>{
     console.log(`connection established with ${socket.id}`)
+
+    socket.on("user-joined", ({fullName})=>{
+      console.log(`${fullName} has joined`)
+    })
+    socket.on("message", ({message})=>{
+      console.log(message)
+    })
 })
