@@ -15,12 +15,18 @@
         width: 100%;
     }
 }
+.LINK{
+    text-decoration: none;
+  }
 
 .hover-box {
     padding: 3px;
     border-radius: 3px;
     font-weight: 600;
     font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.col-white{
+    color: white;
 }
 .col-black{
     color: black;

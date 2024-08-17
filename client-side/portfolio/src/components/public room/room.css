@@ -1,0 +1,225 @@
+.room {
+  min-height: 600px;
+  max-height: 2000px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px;
+  gap: 40px;
+}
+.login-form-container {
+  min-height: 600px;
+  max-height: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.login-form-container .chat-login-form {
+  height: 400px;
+  width: 40%;
+  min-width: 400px;
+  overflow: hidden;
+  gap: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 2px solid rgb(160, 160, 160);
+  position: relative;
+}
+.login-form-lable {
+  position: absolute;
+  top: 20px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.chat-name {
+  outline: none;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(70, 70, 70);
+  font-weight: 600;
+  border: 1px solid;
+  width: 60%;
+}
+.chat-form-submit {
+  border: none;
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 700;
+  border: 1px solid;
+  box-sizing: border-box;
+  background-color: rgb(0, 0, 0);
+}
+.chat-form-submit:active {
+  background-color: rgb(25, 25, 25);
+}
+
+.get-chat-gender {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.1rem;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 700;
+}
+.gender {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  gap: 4px;
+}
+.gender input,
+label {
+  cursor: pointer;
+}
+
+/* chatroom */
+
+.chat-room {
+  height: 600px;
+  width: 80%;
+  border-radius: 10px;
+}
+.chat-container {
+  min-height: 400px;
+  height: 95%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.chat-header {
+  height: 50px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.chat-lable {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.close-btn {
+  font-weight: 400;
+  cursor: pointer;
+  background-color: white;
+  height: 38px;
+  width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+.close-btn:hover {
+  background-color: rgb(214, 214, 214);
+}
+.chat-message-container {
+  height: calc(100% - 100px);
+  width: 100%;
+  border: 2px solid;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 15px 30px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+}
+
+.guidelines {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: monospace;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 10px;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  text-decoration: underline;
+}
+.text-message-info {
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.text-message-name {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Arial Narrow Bold", sans-serif;
+}
+.text-message {
+  font-weight: 400;
+  font-family: sans-serif, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+}
+
+.chat-message-input {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 5px;
+}
+.get-message {
+  width: 82%;
+  height: 90%;
+  outline: none;
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 0 15px;
+  color: rgb(70, 70, 70);
+  font-size: 1.06rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.get-message:hover {
+  background-color: rgb(237, 237, 237);
+}
+.get-message:focus {
+  background-color: rgb(237, 237, 237);
+}
+.send-message {
+  width: 16%;
+  height: 90%;
+  border: 2px solid black;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.send-message:hover {
+  background-color: rgb(28, 28, 28);
+}
+
+.send-message:active {
+  background-color: rgb(49, 49, 49);
+}

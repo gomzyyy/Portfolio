@@ -9,7 +9,6 @@ const Options = ({handleMenu}) => {
             <li onClick={handleMenu}><NavLink className="option" to="/">Home</NavLink></li>
             <li onClick={handleMenu}><NavLink className="option" to="/journey">Journey</NavLink></li>
             <li onClick={handleMenu}><NavLink className="option" to="/skills">Skills</NavLink></li>
-            <li onClick={handleMenu}><NavLink className="option" to="/blogs">Blogs</NavLink></li>
             <li onClick={handleMenu}><NavLink className="option" to="/contact">Contact</NavLink></li>
         </ul>
     )

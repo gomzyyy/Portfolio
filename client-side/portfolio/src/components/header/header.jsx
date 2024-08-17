@@ -17,7 +17,7 @@ const Header = () =>{
             <li><NavLink className={({isActive})=>(isActive ? "nav-option col-orange" : "nav-option col-black" )} to="/">Home</NavLink></li>
             <li><NavLink className={({isActive})=>(isActive ? "nav-option col-orange" : "nav-option col-black" )} to="/journey">Journey</NavLink></li>
             <li><NavLink className={({isActive})=>(isActive ? "nav-option col-orange" : "nav-option col-black" )} to="/skills">Skills</NavLink></li>
-            <li><NavLink className={({isActive})=>(isActive ? "nav-option col-orange" : "nav-option col-black" )} to="/blogs">Blogs</NavLink></li>
+            <li><NavLink className={({isActive})=>(isActive ? "nav-option col-orange" : "nav-option col-black" )} to="/public_room/login">Room</NavLink></li>
             <li><NavLink className={({isActive})=>(isActive ? "nav-option col-orange" : "nav-option col-black" )} to="/contact">Contact</NavLink></li>
         </ul>
         <span className="sidebar-toggle" onClick={handleMenu}>{menu ? <IoMdClose  /> : <IoMdMenu/> }</span>
