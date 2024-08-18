@@ -8,21 +8,21 @@ import { io } from "socket.io-client";
 
 export const ChatLogin = () => {
   const userName = useRef("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleUser = () => {
-    if(userName.current.value === "") {
-      alert("username required")
+    if (userName.current.value === "") {
+      alert("username required");
       return null;
     }
-    if(userName.current.value.length > 14) {
+    if (userName.current.value.length > 14) {
       alert("username exceeding the max character limit : 14");
       userName.current.value = "";
       return null;
     }
-    localStorage.setItem("userName", userName.current.value)
-    userName.current.value = ""
-    navigate("/public/chat")
+    localStorage.setItem("userName", userName.current.value);
+    userName.current.value = "";
+    navigate("/public/chat");
   };
 
   return (
@@ -40,7 +40,7 @@ export const ChatLogin = () => {
               required
             />
             <button className="chat-form-submit" onClick={handleUser}>
-                Enter Room
+              Enter Room
             </button>
           </div>
         </div>
@@ -52,26 +52,57 @@ export const ChatLogin = () => {
 import { useContext } from "react";
 import MutualStates from "../../contextAPI";
 
+const BACKENDURL = `http://localhost:4400/`;
+let socket;
+
 export const ChatRoom = () => {
-  const {handleChatState} = useContext(MutualStates)
-  const inputMessage = useRef("");
-  const [message, setMessage] = useState([]);
+  const { handleChatState } = useContext(MutualStates);
   const NAME = localStorage.getItem("userName");
+  const [id, setId] = useState("");
 
   useEffect(() => {
-    const socket = io(`http://localhost:4400/`);
+    socket = io(BACKENDURL, { transports: ["websocket"] });
+    socket.on("connect", () => {
+      alert("connected to chat");
+      setId(socket.id);
+    });
 
-    socket.emit("message", {message, NAME});
-  }, [message]);
+    socket.emit("joined", { NAME });
 
+    socket.on("greeting", (data) => {
+      console.log(data.user, data.message);
+    });
+
+    socket.on("userJoined", (data) => {
+      console.log(data.user, data.message);
+    });
+
+    socket.on("userLeft", (data) => {
+      console.log(data.user, data.message);
+    });
+
+    return () => {
+      socket.emit("left");
+      socket.off();
+    };
+  }, []);
+
+  useEffect(() => {
+    socket.on("sendMessage", (data) => {
+      console.log(data.message, data.user, data.id);
+    });
+  }, []);
+
+  const inputMessage = useRef("");
   const handleSendBtn = () => {
-    setMessage(inputMessage.current.value);
+    let message = inputMessage.current.value;
+    socket.emit("message", { message, id });
+    inputMessage.current.value = ""
   };
-  const handleCloseChat = () =>{
-    handleChatState()
-    localStorage.removeItem("userName")
-  }
- 
+  const handleCloseChat = () => {
+    handleChatState();
+    localStorage.removeItem("userName");
+  };
 
   return (
     <main className="main room">
@@ -82,7 +113,8 @@ export const ChatRoom = () => {
             <Link to="/" className="LINK col-black">
               <div
                 dangerouslySetInnerHTML={{ __html: closeBtn }}
-                className="close-btn" onClick={handleCloseChat}
+                className="close-btn"
+                onClick={handleCloseChat}
               />
             </Link>
           </div>

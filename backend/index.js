@@ -27,15 +27,24 @@ const IO = new Server(server, {
         credentials:true
     }
 })
-let users
+let users = [{}]
 
 IO.on("connection", (socket)=>{
-    console.log(`connection established with ${socket.id}`)
+    console.log(`new connection`)
 
-    socket.on("user-joined", ({fullName})=>{
-      console.log(`${fullName} has joined`)
+    socket.on("joined", ({NAME})=>{
+         users[socket.id] = NAME;
+         console.log(`${NAME} has joined the chat.`)
+         socket.emit("greeting", {user:"Admin", message: `welcome to the chat, ${users[socket.id]}.`})
+         socket.broadcast.emit("userJoined", {user:"Admin", message:`${users[socket.id]} has joined.`})
     })
-    socket.on("message", ({message})=>{
-      console.log(message)
+    socket.on("left", ()=>{
+      socket.broadcast.emit("userLeft", {user:"Admin", message:`${users[socket.id]} has left the chat.`})
+      console.log(`${users[socket.id]} disconnected`)
     })
+
+    socket.on("message", ({message, id})=>[
+      IO.emit("sendMessage", {message, user: users[id], id})
+    ])
+
 })
