@@ -1,123 +1,150 @@
 .main {
-    /* height: 600px; */
-    width: 96%;
-    margin: 20px 2%;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    animation: slide 0.5s ease-in-out;
-    opacity: 1;
-    position: relative;
+  /* height: 600px; */
+  width: 96%;
+  margin: 20px 2%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  animation: slide 0.5s ease-in-out;
+  opacity: 1;
+  position: relative;
 }
 
 @media (max-width: 620px) {
-    .main{
-        margin: 80px 0 0 0;
-        width: 100%;
-    }
-}
-.LINK{
-    text-decoration: none;
-    display: inline-block;
+  .main {
+    margin: 80px 0 0 0;
+    width: 100%;
   }
+}
+.LINK {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.chat-button {
+  position: fixed;
+  z-index: 999999;
+  bottom: 10vh;
+  right: 5vw;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  background-color: rgba(205, 205, 205, 0.633);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  border-radius: 50%;
+  transition: 0.1s ease-in;
+  display: none;
+
+  &:hover {
+    background-color: rgba(176, 176, 176, 0.633);
+  }
+}
+@media (max-width:600px) {
+  .chat-button{
+    display: flex;
+  }
+}
 
 .hover-box {
-    padding: 3px;
-    border-radius: 3px;
-    font-weight: 600;
-    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 3px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-family: "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.col-white{
-    color: white;
+.col-white {
+  color: white;
 }
-.col-black{
-    color: black;
+.col-black {
+  color: black;
 }
-.col-orange{
-    color: orangered;
+.col-orange {
+  color: orangered;
 }
 
-.error-msg{
-    color: red;
-    font-size:13px;
+.error-msg {
+  color: red;
+  font-size: 13px;
 }
 
 @keyframes slide {
+  0% {
+    opacity: 0;
+  }
 
-    0% {
-        opacity: 0;
-    }
+  50% {
+    opacity: 0.3;
+  }
 
-    50% {
-        opacity: 0.3;
-    }
-
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 .col-html {
-    background-color: rgb(229, 83, 45);
-    color: white;
+  background-color: rgb(229, 83, 45);
+  color: white;
 }
 
 .col-css {
-    background-color: rgb(45, 83, 229);
-    color: white;
+  background-color: rgb(45, 83, 229);
+  color: white;
 }
 
 .col-js {
-    background-color: rgb(249, 220, 67);
-    color: black;
+  background-color: rgb(249, 220, 67);
+  color: black;
 }
 
 .col-react {
-    background-color: rgb(102, 219, 251);
-    color: black;
+  background-color: rgb(102, 219, 251);
+  color: black;
 }
 
 .col-redux {
-    background-color: rgb(125, 82, 194);
-    color: white;
+  background-color: rgb(125, 82, 194);
+  color: white;
 }
 
 .col-node {
-    background-color: rgb(147, 199, 69);
-    color: black;
+  background-color: rgb(147, 199, 69);
+  color: black;
 }
 
 .col-express {
-    background-color: white;
-    color: black;
-    border: 0.5px solid;
+  background-color: white;
+  color: black;
+  border: 0.5px solid;
 }
 
 .col-mongo {
-    background-color: rgb(8, 37, 50);
-    color: rgb(8, 238, 105);
+  background-color: rgb(8, 37, 50);
+  color: rgb(8, 238, 105);
 }
 
 .col-py {
-    background: linear-gradient(to right, rgb(60, 119, 168), rgb(255, 212, 72));
-    color: rgb(31, 31, 31);
+  background: linear-gradient(to right, rgb(60, 119, 168), rgb(255, 212, 72));
+  color: rgb(31, 31, 31);
 }
 
 .col-tailwind {
-    background: linear-gradient(to right, rgb(45, 149, 171), rgb(29, 192, 205));
-    color: rgb(4, 14, 25);
+  background: linear-gradient(to right, rgb(45, 149, 171), rgb(29, 192, 205));
+  color: rgb(4, 14, 25);
 }
 
 .col-bootstrap {
-    background-color: rgb(129, 24, 250);
-    color: white;
+  background-color: rgb(129, 24, 250);
+  color: white;
 }
 
 .col-git {
-    background-color: rgb(240, 86, 57);
-    color: rgb(71, 54, 8);
+  background-color: rgb(240, 86, 57);
+  color: rgb(71, 54, 8);
 }
 
 .col-github {
-    background-color: rgb(22, 24, 31);
-    color: white;
+  background-color: rgb(22, 24, 31);
+  color: white;
 }

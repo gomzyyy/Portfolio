@@ -17,15 +17,16 @@
   border-radius: 10px;
 }
 .login-form-container .chat-login-form {
-  height: 400px;
+  height: 290px;
   width: 40%;
   min-width: 400px;
   overflow: hidden;
   gap: 30px;
+  padding: 40px 20px;
   background-color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
   border-radius: 10px;
   border: 2px solid rgb(160, 160, 160);

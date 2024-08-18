@@ -1,19 +1,20 @@
 import React from "react";
-import "./coming-soon.css"
+import "./coming-soon.css";
+import { PublicChatBtn } from "../../assets/data";
 
 const ComingSoon = () => {
   return (
-    <div style={styles.container}>
-      <div style={styles.card}>
-        <h1 style={styles.heading}>Coming Soon</h1>
-        <p style={styles.text}>
-          We're working hard to bring you something amazing. Stay tuned!
-        </p>
-        <div className="rotate"></div>
+      <div style={styles.container}>
+        <div style={styles.card}>
+          <h1 style={styles.heading}>Coming Soon</h1>
+          <p style={styles.text}>
+            We're working hard to bring you something amazing. Stay tuned!
+          </p>
+          <div className="rotate"></div>
+        </div>
       </div>
-    </div>
   );
-}
+};
 
 const styles = {
   container: {

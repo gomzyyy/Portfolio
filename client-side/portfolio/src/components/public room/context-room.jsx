@@ -1,19 +1,28 @@
 import "./room.css";
 import "./room-responsive.css";
 import "../global.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { closeBtn } from "../../assets/data";
 import { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
 
-
 export const ChatLogin = () => {
-
-  const fullName = useRef();
+  const userName = useRef("");
+  const navigate = useNavigate()
 
   const handleUser = () => {
-    const userName = fullName.current.value
-   localStorage.setItem("userName", userName);
+    if(userName.current.value === "") {
+      alert("username required")
+      return null;
+    }
+    if(userName.current.value.length > 14) {
+      alert("username exceeding the max character limit : 14");
+      userName.current.value = "";
+      return null;
+    }
+    localStorage.setItem("userName", userName.current.value)
+    userName.current.value = ""
+    navigate("/public/chat")
   };
 
   return (
@@ -26,12 +35,12 @@ export const ChatLogin = () => {
               type="text"
               className="chat-name"
               name="getName"
-              ref={fullName}
               placeholder="username (required)"
+              ref={userName}
               required
             />
-            <button className="chat-form-submit" type="" onClick={handleUser}>
-              <Link to="/public/chat" className="LINK">Enter Room</Link>
+            <button className="chat-form-submit" onClick={handleUser}>
+                Enter Room
             </button>
           </div>
         </div>
@@ -40,53 +49,58 @@ export const ChatLogin = () => {
   );
 };
 
+import { useContext } from "react";
+import MutualStates from "../../contextAPI";
+
 export const ChatRoom = () => {
+  const {handleChatState} = useContext(MutualStates)
   const inputMessage = useRef("");
-  const [message, setMessage] = useState([])
-
-  const handleSendBtn = () => {
-    setMessage(inputMessage.current.value)
-  };
-
-  const fullName = localStorage.getItem("userName")
-
-console.log(fullName)
+  const [message, setMessage] = useState([]);
+  const NAME = localStorage.getItem("userName");
 
   useEffect(() => {
     const socket = io(`http://localhost:4400/`);
 
-    socket.emit("user-joined", fullName);
-    socket.emit("message", message)
+    socket.emit("message", {message, NAME});
   }, [message]);
+
+  const handleSendBtn = () => {
+    setMessage(inputMessage.current.value);
+  };
+  const handleCloseChat = () =>{
+    handleChatState()
+    localStorage.removeItem("userName")
+  }
+ 
 
   return (
     <main className="main room">
-    <div className="chat-room">
-      <div className="chat-container">
-        <div className="chat-header">
-          <span className="chat-lable">Public room</span>
-          <Link to="/public/login" className="LINK col-black">
-            <div
-              dangerouslySetInnerHTML={{ __html: closeBtn }}
-              className="close-btn"
-            />
-          </Link>
-        </div>
-        <div className="chat-message-container">
-          <span className="guidelines">Be polite while conversation.</span>
-          <span className="text-message-info">
-            <span className="text-message-name">chris: </span>
-            <span className="text-message">hello, nice to meet you</span>
-          </span>
-        </div>
-        <div className="chat-message-input">
-          <input type="text" className="get-message" ref={inputMessage} />
-          <button className="send-message" onClick={handleSendBtn}>
-            Send
-          </button>
+      <div className="chat-room">
+        <div className="chat-container">
+          <div className="chat-header">
+            <span className="chat-lable">Public room</span>
+            <Link to="/" className="LINK col-black">
+              <div
+                dangerouslySetInnerHTML={{ __html: closeBtn }}
+                className="close-btn" onClick={handleCloseChat}
+              />
+            </Link>
+          </div>
+          <div className="chat-message-container">
+            <span className="guidelines">Be polite while conversation.</span>
+            <span className="text-message-info">
+              <span className="text-message-name">You: </span>
+              <span className="text-message">hello, nice to meet you</span>
+            </span>
+          </div>
+          <div className="chat-message-input">
+            <input type="text" className="get-message" ref={inputMessage} />
+            <button className="send-message" onClick={handleSendBtn}>
+              Send
+            </button>
+          </div>
         </div>
       </div>
-    </div>
     </main>
   );
 };
