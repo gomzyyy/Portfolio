@@ -7,7 +7,7 @@ dotenv.config({});
 
 const app = express();
 app.use(cors({
-    origin:`http://localhost:5173`,
+    origin:`http://localhost:5173/`,
     credentials:true
 }));
 
@@ -23,7 +23,7 @@ const server = app.listen(PORT, () => {
 
 const IO = new Server(server, {
     cors:{
-        origin:[`http://localhost:5173`, `https://remarkable-dusk-d9cdc3.netlify.app/`],
+        origin:`http://localhost:5173/`,
         credentials:true
     }
 })
@@ -40,11 +40,14 @@ IO.on("connection", (socket)=>{
     })
     socket.on("left", ()=>{
       socket.broadcast.emit("userLeft", {user:"Admin", message:`${users[socket.id]} has left the chat.`})
+      delete users[socket.id]
       console.log(`${users[socket.id]} disconnected`)
     })
 
-    socket.on("message", ({message, id})=>[
+    socket.on("message", ({message, id})=>{
+      if(users[id]){
       IO.emit("sendMessage", {message, user: users[id], id})
-    ])
+    }
+})
 
 })
