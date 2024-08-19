@@ -23,7 +23,7 @@ const server = app.listen(PORT, () => {
 
 const IO = new Server(server, {
     cors:{
-        origin:`http://localhost:5173`,
+        origin:[`http://localhost:5173`, `https://remarkable-dusk-d9cdc3.netlify.app/`],
         credentials:true
     }
 })
