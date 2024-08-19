@@ -220,5 +220,5 @@ const { handleChatState} = useContext(MutualStates)
 {/* SERVER ERROR LABLE AND REASONS */}
 
 export const ServerOffLabel = "Access blocked!";
-export const ServerOffIssues = ["Make sure that you are connected to internet.","It could be a server mainitainance break.","There might be login issues."]
+export const ServerOffIssues = ["Make sure that you are connected to internet.","It could be a server maintainance break.","There might be login issues."]
 export const ServerOffFixes = ["Please try loging in again.","Check your network connection and come back later."]
