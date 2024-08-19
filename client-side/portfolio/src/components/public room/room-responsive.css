@@ -1,4 +1,20 @@
-@media (max-width: 420px) {
+@media (max-width: 720px) {
+  
+  .room{
+    padding: 5px;
+  }
+  .chat-room {
+    height: 600px;
+    width: 100%;
+    border-radius: 10px;
+}
+  .chat-lable {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 500px) {
   .room {
     max-height: 500px;
     justify-content: center;
@@ -23,12 +39,14 @@
   }
   .chat-header{
     border-radius: 0;
+    padding: 5px;
   }
   .chat-message-container {
     border-radius: 0;
   }
   .chat-lable {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
   }
   .guidelines{
     padding: 5px 5px;

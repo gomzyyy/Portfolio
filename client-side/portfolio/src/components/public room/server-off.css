@@ -1,0 +1,32 @@
+.server-off {
+  height: fit-content;
+  width: 40%;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid;
+  border-radius: 8px;
+  gap: 10px;
+}
+.serverOff-label {
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+}
+.problems,
+.solutions {
+  height: fit-content;
+  width: 81%;
+}
+.server-off-label {
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+.problems li,
+.solutions li{
+    list-style: disc;
+    text-overflow: ellipsis;
+}

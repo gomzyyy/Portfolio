@@ -51,19 +51,24 @@ export const ChatLogin = () => {
 
 import { useContext } from "react";
 import MutualStates from "../../contextAPI";
+import ServerOff from "./serveroff";
+import Message from "./message";
 
 const BACKENDURL = `http://localhost:4400/`;
 let socket;
 
 export const ChatRoom = () => {
   const { handleChatState } = useContext(MutualStates);
-  const NAME = localStorage.getItem("userName");
+  let NAME = localStorage.getItem("userName");
   const [id, setId] = useState("");
+  const [messages, setMessages] = useState([]);
+  const [serverStatus, setServerStatus] = useState(false);
 
   useEffect(() => {
     socket = io(BACKENDURL, { transports: ["websocket"] });
     socket.on("connect", () => {
-      alert("connected to chat");
+      if(!socket.connected) return;
+      setServerStatus(true)
       setId(socket.id);
     });
 
@@ -90,8 +95,13 @@ export const ChatRoom = () => {
   useEffect(() => {
     socket.on("sendMessage", (data) => {
       console.log(data.message, data.user, data.id);
+      setMessages([data, ...messages])
+      console.log(messages)
     });
-  }, []);
+    return ()=>{
+      socket.off()
+    }
+  }, [messages]);
 
   const inputMessage = useRef("");
   const handleSendBtn = () => {
@@ -106,10 +116,10 @@ export const ChatRoom = () => {
 
   return (
     <main className="main room">
-      <div className="chat-room">
+      {serverStatus ? <div className="chat-room">
         <div className="chat-container">
           <div className="chat-header">
-            <span className="chat-lable">Public room</span>
+            <span className="chat-lable">Server status: {serverStatus? <span className="online">"connected"</span> : <span className="offline">"disconnected"</span> }</span>
             <Link to="/" className="LINK col-black">
               <div
                 dangerouslySetInnerHTML={{ __html: closeBtn }}
@@ -120,10 +130,7 @@ export const ChatRoom = () => {
           </div>
           <div className="chat-message-container">
             <span className="guidelines">Be polite while conversation.</span>
-            <span className="text-message-info">
-              <span className="text-message-name">You: </span>
-              <span className="text-message">hello, nice to meet you</span>
-            </span>
+            {messages.map((data, i) => (<Message key={i} message={data.message} user={ data.id === id ?  null : data.user} />))}
           </div>
           <div className="chat-message-input">
             <input type="text" className="get-message" ref={inputMessage} />
@@ -132,7 +139,7 @@ export const ChatRoom = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> : <ServerOff/>}
     </main>
   );
 };

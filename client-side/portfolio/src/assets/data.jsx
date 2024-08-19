@@ -189,6 +189,9 @@ export const twitter = `<svg xmlns="http://www.w3.org/2000/svg" width="70" heigh
 export const closeBtn = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
   <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
 </svg>`;
+export const chatBtnIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+<path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+</svg>`;
 
 {
   /* CHAT BUTTON */
@@ -201,9 +204,6 @@ import MutualStates from "../contextAPI";
 
 
 export const PublicChatBtn = () => {
-  const chatBtnIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-  <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-</svg>`;
 
 const { handleChatState} = useContext(MutualStates)
 
@@ -215,3 +215,10 @@ const { handleChatState} = useContext(MutualStates)
     </div>
   );
 };
+
+
+{/* SERVER ERROR LABLE AND REASONS */}
+
+export const ServerOffLabel = "Access blocked!";
+export const ServerOffIssues = ["Make sure that you are connected to internet.","It could be a server mainitainance break.","There might be login issues."]
+export const ServerOffFixes = ["Please try loging in again.","Check your network connection and come back later."]
