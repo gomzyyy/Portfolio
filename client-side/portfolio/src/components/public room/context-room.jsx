@@ -54,7 +54,7 @@ import MutualStates from "../../contextAPI";
 import ServerOff from "./serveroff";
 import Message from "./message";
 
-const BACKENDURL = `http://localhost:4400/`;
+const BACKENDURL = `http://localhost:8000/`;
 let socket;
 
 export const ChatRoom = () => {

@@ -7,7 +7,7 @@ dotenv.config({});
 
 const app = express();
 app.use(cors({
-    origin:`http://202.14.123.41`,
+    origin:`*`,
     methods:["GET","POST","PUT" ,"DELETE"],
     credentials:true
 }));
@@ -24,13 +24,12 @@ const server = app.listen(PORT, () => {
 
 const IO = new Server(server, {
     cors:{
-        origin:`http://202.14.123.41`,
+        origin:`*`,
         methods:["GET","POST","PUT" ,"DELETE"],
         credentials:true
     }
 })
 
-//202.14.123.41
 let users = [{}]
 
 IO.on("connection", (socket)=>{

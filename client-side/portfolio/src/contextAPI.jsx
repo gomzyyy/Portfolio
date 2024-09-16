@@ -15,7 +15,6 @@ export const StatesProvider = ({ children }) => {
         setMenu(p => !p);
     }
     const handleChatState = () => {
-        console.log("clicked 356")
         setChatState(p=>!p);
     }
 

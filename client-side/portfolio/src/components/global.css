@@ -42,8 +42,8 @@
     background-color: rgba(176, 176, 176, 0.633);
   }
 }
-@media (max-width:600px) {
-  .chat-button{
+@media (max-width: 600px) {
+  .chat-button {
     display: flex;
   }
 }
