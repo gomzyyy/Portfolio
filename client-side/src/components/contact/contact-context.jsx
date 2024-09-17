@@ -15,7 +15,6 @@ const BASE_URL = `http://localhost:8000/api/`;
 
 export const ContactForm = () => {
 
-  console.log(BASE_URL + "connect")
   const sendConnection = async (
     fullName,
     countryCode,

@@ -45,7 +45,7 @@ export const connectController = async (req, res) => {
       await user.save();
       if (alreadyRequested) {
         if (feedback && feedback.length > 10) {
-          alreadyRequested.feedback = [...alreadyRequested.feedback, feedback];
+          alreadyRequested.feedback = feedback;
           await alreadyRequested.save();
           return res.status(200).json({
             message: `Welcome back ${user.fullName}, Thanks for yout feedback.`,

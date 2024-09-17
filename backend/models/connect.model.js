@@ -6,7 +6,7 @@ const connectSchema = new Schema(
       type: String,
       required: true,
     },
-    email:{
+    email: {
       type: String,
       required: true,
     },
@@ -25,10 +25,9 @@ const connectSchema = new Schema(
       type: String,
     },
     feedback: {
-      type: [String],
+      type: String,
       maxlength: 300,
       minlength: 10,
-      default: [],
     },
   },
   { timestamps: true }

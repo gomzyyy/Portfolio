@@ -11,13 +11,26 @@ const userSchema = new Schema(
       required: true,
       unique: true,
     },
+    password: {
+      type: String,
+      required: true,
+    },
     countryCode: {
       type: String,
+      default:"+91"
     },
     phoneNumber: {
+      type: String,
+      minlength: [10, "Phone number should be atleast 10 character long."],
+      maxlength: [10, "Phone number should be atleast 10 character long."],
+    },
+    age: {
       type: Number,
-      minlength: [10, "Phone number should be atleast 10 character long"],
-      maxlength: [10, "Phone number should be atleast 10 character long"]
+    },
+    gender: {
+      type:String,
+      enum:["male", "female", "others"],
+      default:"N/A"
     },
     socialHandleId: {
       type: String,
@@ -25,17 +38,19 @@ const userSchema = new Schema(
     socialHandleType: {
       type: String,
     },
-    feedback: [
-      {
-        type: String,
-        maxlength: 300,
-        minlength: 10,
-      },
-    ],
+    feedback: {
+      type: String,
+      maxlength: 300,
+      minlength: 10,
+    },
+    niche: {
+     type:String,
+     maxlength:20
+    },
     isKnown: {
-        type: Boolean,
-        default: false,
-      },
+      type: Boolean,
+      default: false,
+    },
     isVerified: {
       type: Boolean,
       default: false,
@@ -43,13 +58,19 @@ const userSchema = new Schema(
     blogs: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Blogs",
+        ref: "Blog",
       },
     ],
     Message: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Message",
+      },
+    ],
+    savedBlogs: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Blog",
       },
     ],
   },
