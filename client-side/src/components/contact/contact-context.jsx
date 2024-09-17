@@ -1,6 +1,6 @@
 import "./contact.css";
 import "../global.css";
-import "./contact-responsive.css"
+import "./contact-responsive.css";
 import { useRef, useState } from "react";
 import {
   NAME,
@@ -11,9 +11,50 @@ import {
   twitter,
 } from "../../assets/data";
 
+const BASE_URL = `http://localhost:8000/api/`;
+
 export const ContactForm = () => {
+
+  console.log(BASE_URL + "connect")
+  const sendConnection = async (
+    fullName,
+    countryCode,
+    phoneNumber,
+    email,
+    socialHandleId,
+    socialHandleType,
+    feedback
+  ) => {
+    try {
+      const send = await fetch(BASE_URL + "connect", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName,
+          countryCode,
+          phoneNumber,
+          email,
+          socialHandleId,
+          socialHandleType,
+          feedback,
+        }),
+      });
+
+      if (!send.ok) {
+        throw new Error();
+        return;
+      }
+      const res = await send.json();
+      return res;
+    } catch (error) {
+      return "Error occured while sending request" + error;
+    }
+  };
+
   const contactFormRef = useRef();
-  const [passwordError, setPasswordError] = useState(false);
+  const [phoneNumberError, setPhoneNumberError] = useState(false);
   const defaultCountryCode = "+91";
 
   const checkPlus = (num) => {
@@ -25,16 +66,15 @@ export const ContactForm = () => {
     return `+${numToString}`;
   };
 
-  const handleOnSubmitContact = (e) => {
+  const handleOnSubmitContact = async (e) => {
     e.preventDefault();
-    let contactData = [];
 
     const formData = new FormData(e.target);
-    const name = formData.get("getName");
+    const userName = formData.get("getName");
     const enteredcountryCode = formData.get("getCountryCode");
     const phoneNumber = formData.get("getContactNumber");
-    const mailId = formData.get("getMail");
-    const socialHandle = formData.get("getSocialHandle");
+    const email = formData.get("getMail");
+    const socialHandleId = formData.get("getSocialHandle");
     const socialMediaType = formData.get("getSocialMediaType");
     const feedback = formData.get("feedback");
     if (phoneNumber.length > 0)
@@ -45,30 +85,25 @@ export const ContactForm = () => {
       ? checkPlus(enteredcountryCode)
       : defaultCountryCode;
 
-    contactData = [
-      name,
+    const res = await sendConnection(
+      userName,
       countryCode,
       phoneNumber,
-      mailId,
-      socialHandle,
+      email,
+      socialHandleId,
       socialMediaType,
-      feedback,
-    ];
+      feedback
+    );
 
-    const jsonDataContact = JSON.stringify(contactData);
     contactFormRef && contactFormRef.current.reset();
-
-    alert(`Dear ${name}, your request has beesn recorded.`);
-    console.log(jsonDataContact);
-
-    return jsonDataContact;
+    return res;
   };
 
   const handlePasswordError = (e) => {
     if (e.target.value.length === 10) {
-      setPasswordError(false);
+      setPhoneNumberError(false);
     } else {
-      setPasswordError(true);
+      setPhoneNumberError(true);
     }
   };
 
@@ -99,7 +134,7 @@ export const ContactForm = () => {
           placeholder="full name (required)"
           required
         />
-        {passwordError && (
+        {phoneNumberError && (
           <span className="error-msg error-password">
             Please enter a valid phone number.
           </span>
@@ -160,25 +195,28 @@ export const ContactForm = () => {
 };
 
 export const SocialMediaContact = () => {
-  const igLink = `https://www.instagram.com/urzyatin/`
-  const linkedinLink = `https://www.linkedin.com/in/gomzy-dhingra-4140202b5/`
-  const twitterLink = `https://x.com/urzyatin`
+  const igLink = `https://www.instagram.com/urzyatin/`;
+  const linkedinLink = `https://www.linkedin.com/in/gomzy-dhingra-4140202b5/`;
+  const twitterLink = `https://x.com/urzyatin`;
   return (
     <div className="social-media-side">
-
       <div className="link-container">
-      <div className="contact-lable media-links">Lets connect via</div>
-      <div className="link-icons">
-        <a href={igLink} target="_blank" style={{color:"rgb(255, 2, 105)"}}>
-          <div dangerouslySetInnerHTML={{ __html: instagram }} />
-        </a>
-        <a href={linkedinLink} target="_blank" style={{color:"blue"}}>
-          <div dangerouslySetInnerHTML={{ __html: linkdin }} />
-        </a>
-        <a href={twitterLink} target="_blank" style={{color:"black"}}>
-          <div dangerouslySetInnerHTML={{ __html: twitter }} />
-        </a>
-      </div>
+        <div className="contact-lable media-links">Lets connect via</div>
+        <div className="link-icons">
+          <a
+            href={igLink}
+            target="_blank"
+            style={{ color: "rgb(255, 2, 105)" }}
+          >
+            <div dangerouslySetInnerHTML={{ __html: instagram }} />
+          </a>
+          <a href={linkedinLink} target="_blank" style={{ color: "blue" }}>
+            <div dangerouslySetInnerHTML={{ __html: linkdin }} />
+          </a>
+          <a href={twitterLink} target="_blank" style={{ color: "black" }}>
+            <div dangerouslySetInnerHTML={{ __html: twitter }} />
+          </a>
+        </div>
       </div>
     </div>
   );
